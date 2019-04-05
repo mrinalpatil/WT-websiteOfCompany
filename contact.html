@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact</title>
+<link rel="stylesheet" type="text/css" href="theme2.css">
+
+</head>
+<body class="body1">
+
+<form action="/conn.php"   method="post">
+  <div class="container">
+
+     <div class="hh"><b>Query Form</b></div>
+    <hr>
+
+    <label for="fname"><b>Name</b></label>
+    <input placeholder="Enter Email"  type="text" value="name" name="name" required>
+    
+    <label for="email"><b>Email</b></label>
+    <input  placeholder="Enter Email" name="email" type="text" value="email" required>
+    
+    
+   <label for="text"> <b>Enquire about product or book product.</b></label><br><br> <textarea  placeholder="Enter text" rows="4" cols="60"></textarea><br><br>
+   
+      <button type="text" class="signupbtn" value="area" name="area" >Sign Up</button>
+    </div>
+
+
+
+</form>
+
+<script>
+
+
+
+
+
+function f1(){
+	var flag=0;
+	var x;
+	  x = document.getElementById("phn").value;
+			if (isNaN(x) || x.length<10) {
+			alert("Pls enter valid number!!");
+			flag=1;
+			}
+			
+			if (document.getElementById("fname").value == "" )
+						{
+			          alert("Name should not be blank");
+									flag=1;
+			      }
+			
+				var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	       if (reg.test(document.getElementById("em").value) == false) 
+	        {
+	            alert('Invalid Email Address');
+	          	flag=1;
+	        }
+
+	       if(flag==0)
+	    	   alert("You have send enquiry!!");
+	    	   };
+
+
+
+
+
+</script>
+
+
+	
+	
+</body>
+</html>
